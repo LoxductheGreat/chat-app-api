@@ -1,6 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const connectDB = require('./config/db')
+const cors = require('cors')
 const userRoutes = require('./routes/userRoutes')
 const chatRoutes = require('./routes/chatRoutes')
 const messageRoutes = require('./routes/messageRoutes')
@@ -11,6 +12,7 @@ dotenv.config()
 connectDB()
 
 app.use(express.json())
+app.use(cors())
 
 app.get('/', (req, res) => {
   res.send('Api is running')
