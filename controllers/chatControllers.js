@@ -41,7 +41,7 @@ const accessChat = asyncHandler(async (req, res) => {
         '-password'
       )
 
-      res.status(200).json(FullChat)
+      res.status(200).send(FullChat)
     } catch (error) {
       res.status(400)
       throw new Error(error.message)
