@@ -37,7 +37,7 @@ const server = app.listen(PORT, console.log(`Server is running on Port ${PORT}`)
 const io = require('socket.io')(server, {
   pingTimeout: 60000,
   cors: {
-    origin: 'https://chatify-chat-talking-app.netlify.app/' // 'http://localhost:3000'
+    origin: 'https://chatify-chat-talking-app.netlify.app' // 'http://localhost:3000'
   }
 })
 
